@@ -1,0 +1,10 @@
+version: '3'
+services:
+    opsdroid:
+        image: opsdroid/opsdroid
+        volumes:
+            - "./iapythonopsdroid/configuration.yaml:/etc/opsdroid/configuration.yaml:ro"
+        ports:
+            - "8080:8080"
+        # command: ""
+        restart: always
